@@ -71,6 +71,13 @@ def home(request: Request, ma50=None, ma200=None, db: Session = Depends(get_db))
         
     })
 
+## List all assets currently stored in the watchlist
+@app.get('/list')
+def list_assets(db: Session = Depends(get_db)):
+    assets = db.query(Asset).all()
+
+    return assets
+
 ## Update the current assets in the database with latest quote
 @app.get('/update')
 async def update_assets(background_tasks: BackgroundTasks, db: Session = Depends(get_db)):

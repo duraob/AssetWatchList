@@ -12,9 +12,7 @@ DELETE - Delete items from watchlist through GUI or API <br />
 * FastAPI - routing <br />
 * uvicorn - web server <br />
 * SQLAlchemy - query logic & db management <br />
-<br />
 <h4>Front End:</h4>
 * Jinja2 - templating <br />
 * Javascript & Jquery - UX <br />
 * Semantic UI - components <br />
-
