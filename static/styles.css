@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+.container-width {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1150px;
+}
+
+.flex-title {
+    margin-bottom: 15px;
+    font-size: 3em;
+    text-align: center;
+    color: #4a4a4a;
+    padding: 5px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0em;
+    line-height: 1.1em;
+    text-transform: none;
+}

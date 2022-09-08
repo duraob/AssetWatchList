@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block content %}
+<script type="text/javascript" src="{{ url_for('static', path='/script.js') }}"></script>
+<div>
+    <form style="float:right">
+        <div class="ui toggle checkbox">
+            <input name='ma50' type="checkbox" name="example" {% if ma50 %}checked="checked" {% endif %}>
+            <label>Above 50 Day MA</label>
+        </div>
+        <div class="ui toggle checkbox">
+            <input name='ma200' type="checkbox" name="example" {% if ma200 %}checked="checked" {% endif %}>
+            <label>Above 200 Day MA</label>
+        </div>
+        <button class="ui button green">Filter</button>
+    </form>
+    <div>
+        <button id="add_asset" class="ui button red">Add Assets</button>
+        <button id="remove_asset" class="ui button orange">Remove Assets</button>
+        <button id="update_assets" class="ui button yellow">Update Assets</button>
+    </div>
+</div>
+<table class="ui inverted blue table">
+    <thead>
+        <tr>
+            <th>Symbol</th>
+            <th>Quote</th>
+            <th>P/E</th>
+            <th>Dividend Yield</th>
+            <th>EMA 50</th>
+            <th>EMA 200</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for asset in assets %}
+        <tr>
+            <td>{{asset.symbol}}</td>
+            <td>{{asset.quote}}</td>
+            <td>{{asset.pe}}</td>
+            <td>{{asset.dividend}}</td>
+            <td>{{asset.ma50}}</td>
+            <td>{{asset.ma200}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<div id='add' class="ui modal">
+    <i class="close icon"></i>
+    <div class="header">
+        Add To Watchlist
+    </div>
+    <div class="content">
+        <div class="ui form">
+            <div class="field">
+                <label>Enter Symbols</label>
+                <textarea id="assets"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="actions">
+        <div id='save' class="ui positive right labeled icon button">
+            Add Symbols
+            <i class="plus icon"></i>
+        </div>
+    </div>
+</div>
+<div id='del' class="ui modal">
+    <i class="close icon"></i>
+    <div class="header">
+        Remove From Watchlist
+    </div>
+    <div class="content">
+        <div class="ui form">
+            <div class="field">
+                <label>Enter Symbols</label>
+                <textarea id="rm_assets"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="actions">
+        <div id='remove' class="ui positive right labeled icon button">
+            Remove Symbols
+            <i class="plus icon"></i>
+        </div>
+    </div>
+</div>
+{% endblock %}
