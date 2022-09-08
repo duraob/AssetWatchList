@@ -1,5 +1,6 @@
 # AssetWatchList
 CRUD Web App Demo - Add Assets to watchlist and retrieve company financial info <br />
+<br />
 CREATE - Add items to watchlist through Web App GUI or API <br />
 READ - List items displayed on homepage of Web App through API <br />
 UPDATE - Retrieve new quotes through gui or API, Updated/Add Notes for each asset <br />
