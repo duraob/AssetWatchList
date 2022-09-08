@@ -6,6 +6,7 @@ READ - List items displayed on homepage of Web App through API <br />
 UPDATE - Retrieve new quotes through gui or API, Updated/Add Notes for each asset <br />
 DELETE - Delete items from watchlist through GUI or API <br />
 <br />
+![WebApp Live Demo](/WatchListDemo.gif)  
 <h3>Tech Stack</h3>
 <h4>Backend:</h4>
 * Python <br />
