@@ -6,14 +6,14 @@ READ - List items displayed on homepage of Web App through API <br />
 UPDATE - Retrieve new quotes through gui or API, Updated/Add Notes for each asset <br />
 DELETE - Delete items from watchlist through GUI or API <br />
 <br />
-<h3>Tech Stack</h3> <br />
-<h4>Backend:</h4><br />
+<h3>Tech Stack</h3>
+<h4>Backend:</h4>
 * Python <br />
 * FastAPI - routing <br />
 * uvicorn - web server <br />
 * SQLAlchemy - query logic & db management <br />
 <br />
-<h4>Front End:</h4><br />
+<h4>Front End:</h4>
 * Jinja2 - templating <br />
 * Javascript & Jquery - UX <br />
 * Semantic UI - components <br />
